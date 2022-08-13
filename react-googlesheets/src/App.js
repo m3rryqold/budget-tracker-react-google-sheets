@@ -7,12 +7,18 @@ export default class App extends Component {
   constructor(props) {
     super(props)
   
+    // this.state = {
+    //    name: '',
+    //    age: '',
+    //    salary: '',
+    //    hobby: ''
+    // }
     this.state = {
-       name: '',
-       age: '',
-       salary: '',
-       hobby: ''
-    }
+      item: 'fooding',
+      cup: 'Leisure',
+      amount: 4000,
+      breakdown: 'amala,ewedu'
+   }
   }
 
   changeHandler = (e) => {
@@ -23,7 +29,8 @@ export default class App extends Component {
     e.preventDefault();
     console.log(this.state);
 
-    axios.post('https://sheet.best/api/sheets/fc390266-2ca5-4eee-a0a5-31f31720cee6', this.state)
+    axios.post('https://sheet.best/api/sheets/ad556128-21a8-4865-8b6a-daf6ebbcdab6', this.state)
+    // axios.post('https://sheets.googleapis.com/v4/spreadsheets/1OvVIZNIo1Mx0vEpiPDlMn3u0Os3pOII4MU0xPRGFjW8/values/string:append', this.state)
     .then(response => {
       console.log(response);
     })
